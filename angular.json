@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angularCart"
+    }
+  },
+  "defaultProject": "angularCart",
+  "cli": {
+    "analytics": false
+  }
 }
