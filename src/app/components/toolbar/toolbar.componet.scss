@@ -1,0 +1,12 @@
+.toolbar {
+  height: 56px;
+  background-color: red;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding:  0 60px;
+    max-width: 1600px;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "name": "oddworld: stranger's wrath",
+      "image": "sdfdsds",
+      "price": 9.99,
+      "discount": 50,
+      "owned": false,
+      "inCart": false
+    },
+    {
+      "name": "chaos on deponia",
+      "image": "sdfdsds",
+      "price": 9.99,
+      "discount": 0,
+      "owned": true,
+      "inCart": false
+    },
+    {
+      "name": "the settlers 2: gold edition",
+      "image": "sdfdsds",
+      "price": 5.99,
+      "discount": 0,
+      "owned": false,
+      "inCart": false
+    },
+    {
+      "name": "neverwinter Nights",
+      "image": "sdfdsds",
+      "price": 4.99,
+      "discount": 50,
+      "owned": false,
+      "inCart": false
+    },
+    {
+
+    }
+
+  ]
+}

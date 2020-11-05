@@ -1,0 +1,16 @@
+@import './variables';
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  height: auto;
+  margin: 0;
+  font-family: "Source Sans Pro";
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}

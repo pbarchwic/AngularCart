@@ -1,0 +1,25 @@
+@import 'variables';
+
+.main {
+  background-color: $background-color;
+  height: calc(100vh - 56px);
+  .container {
+    margin: auto;
+    padding: 60px;
+    max-width: 1600px;
+
+    span {
+      display: inline-block;
+      font-size: 15px;
+      color: #262626;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
