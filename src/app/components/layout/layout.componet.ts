@@ -13,21 +13,20 @@ export class LayoutComponent implements OnInit {
   public products: any;
   constructor(private readonly http: HttpClient) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getProducts();
   }
 
-  public getProductDetails() {
+  public getProductDetails(): Observable<ProductsResponse> {
     return this.http
-      .get(`assets/data-mocks/products.json`)
+      .get<ProductsResponse>(`assets/data-mocks/products.json`)
       .pipe(map((response) => response));
   }
 
-  public getProducts() {
+  public getProducts(): void {
     this.getProductDetails().subscribe(
-      (product: ProductsResponse) => {
-        this.products = product.products;
-        console.log(this.products);
+      (response: ProductsResponse) => {
+        this.products = response.products;
       },
       () => {}
     );

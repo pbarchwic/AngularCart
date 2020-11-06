@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 html {
   height: 100%;
@@ -9,8 +9,18 @@ body {
   height: auto;
   margin: 0;
   font-family: "Source Sans Pro";
+  color: $text-color;
 }
 
-*, :after, :before {
+button {
+  cursor: pointer;
+  background-color: transparent;
+  font-family: "Source Sans Pro";
+  color: $text-color;
+}
+
+*,
+:after,
+:before {
   box-sizing: border-box;
 }

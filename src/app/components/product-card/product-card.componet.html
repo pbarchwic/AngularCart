@@ -1,6 +1,13 @@
 <div class="product-card">
-  <img [src]="product.image" />
-  <span>{{product.name}}</span>
-  <span> -50%</span>
-  <span>9.99</span>
+  <img class="product-card__img" [src]="product.image" />
+  <div class="product-card__desc" [class.disabled]="product.owned">
+    <span class="name">{{product.name}}</span>
+    <div class="info-box">
+      <span class="discount" *ngIf="product.discount">-{{product.discount}}%</span>
+      <button class="button action" *ngIf="!product.owned; else owned">{{product.inCart ? 'in cart' : '$'+ product.price}}</button>
+      <ng-template #owned>
+        <span class="action">owned</span>
+    </ng-template>
+    </div>
+  </div>
 </div>

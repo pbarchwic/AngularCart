@@ -10,6 +10,7 @@ import * as Components from './index';
     Components.ToolbarComponent,
     Components.LayoutComponent,
     Components.ProductCardComponent,
+    Components.CartComponent,
   ],
   imports: [BrowserModule, RootRoutingModule, HttpClientModule],
   providers: [],
