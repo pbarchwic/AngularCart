@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { RootRoutingModule } from './root-routing.module';
 import * as Components from './index';
 
@@ -11,7 +11,7 @@ import * as Components from './index';
     Components.LayoutComponent,
     Components.ProductCardComponent,
   ],
-  imports: [BrowserModule, RootRoutingModule],
+  imports: [BrowserModule, RootRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [Components.RootComponent],
 })
