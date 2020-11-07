@@ -1,6 +1,7 @@
 {
   "products": [
     {
+      "id": 1,
       "name": "oddworld: stranger's wrath",
       "image": "assets/images/odd.jpg",
       "price": 9.99,
@@ -9,6 +10,7 @@
       "inCart": false
     },
     {
+      "id": 2,
       "name": "chaos on deponia",
       "image": "assets/images/dep.jpg",
       "price": 9.99,
@@ -17,6 +19,7 @@
       "inCart": false
     },
     {
+      "id": 3,
       "name": "the settlers 2: gold edition",
       "image": "assets/images/sett.jpg",
       "price": 5.99,
@@ -25,6 +28,7 @@
       "inCart": false
     },
     {
+      "id": 4,
       "name": "neverwinter nights",
       "image": "assets/images/never.jpg",
       "price": 4.99,
@@ -33,6 +37,7 @@
       "inCart": false
     },
     {
+      "id": 5,
       "name": "assassin’s creed: director’s cut",
       "image": "assets/images/creed.jpg",
       "price": 9.99,
