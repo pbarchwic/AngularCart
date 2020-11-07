@@ -1,0 +1,35 @@
+@import "variables";
+
+.cart {
+  position: absolute;
+  top: 56px;
+  background-color: white;
+  margin-right: 60px;
+  right: 0;
+
+  .cart__item {
+    display: flex;
+    width: 350px;
+    height: 56px;
+    padding: 5px;
+    border-bottom: 1px solid $border-color;
+    &.action {
+      justify-content: center;
+      .empty {
+        font-size: 16px;
+        line-height: 35px;
+      }
+    }
+    .item-image {
+      display: inline-block;
+      height: 100%;
+    }
+    .item-name {
+
+    }
+    .item-price {
+
+    }
+  }
+
+}

@@ -1,0 +1,52 @@
+@import 'variables';
+
+.toolbar {
+  height: 56px;
+  background-image: linear-gradient(0deg, rgba(237,237,237,0) 9%, #ededed 99%);
+  box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.3);
+
+  .container{
+    position: relative;
+    height: 100%;
+    margin: auto;
+    padding:  0 60px;
+    max-width: 1600px;
+    .icons-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      .cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 56px;
+        height: 100%;
+        transition: 0.3s;
+        border: none;
+
+        .cart-icon {
+          display: block;
+          width: 20px;
+
+        }
+        .cart-content {
+          display: none;
+       }
+        &:hover {
+          background-color: $color-white;
+          border-left: 1px solid $border-color;
+          border-right: 1px solid $border-color;
+          .cart-content {
+            display: block;
+          }
+        }
+
+      }
+    }
+
+
+  }
+}

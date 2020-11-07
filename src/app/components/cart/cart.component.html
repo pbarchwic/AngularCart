@@ -1,0 +1,19 @@
+<div class="cart">
+  <div class="cart__item action">
+    <span class="empty" *ngIf="cartItems.length === 0">Your cart is empty</span>
+    <div *ngIf="cartItems.length">
+      <span
+        >{{ cartItems.length }}
+        {{ cartItems.length === 1 ? "item" : "items" }} in cart</span
+      >
+      <span>$PRICE</span>
+      <button (click)="removeAll()">clear all</button>
+    </div>
+  </div>
+  <div class="cart__item" *ngFor="let item of cartItems">
+    <img class="item-image" [src]="item.image" />
+    <span class="item-name">{{ item.name }}</span>
+    <span class="item-price">{{ item.price }}</span>
+    <button (click)="removeItem(item)">Remove</button>
+  </div>
+</div>
