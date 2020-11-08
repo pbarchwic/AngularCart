@@ -1,13 +1,15 @@
 <div class="cart">
   <div class="cart__item action">
     <span class="empty" *ngIf="cartItems.length === 0">Your cart is empty</span>
-    <div *ngIf="cartItems.length">
+    <div class="action-items" *ngIf="cartItems.length">
       <span
         >{{ cartItems.length }}
         {{ cartItems.length === 1 ? "item" : "items" }} in cart</span
       >
-      <span>$PRICE</span>
-      <button (click)="removeAll()">clear all</button>
+      <div class="price">
+        <span>${{ sumPrice }}</span>
+        <button (click)="removeAll()">clear cart</button>
+      </div>
     </div>
   </div>
   <div class="cart__item" *ngFor="let item of cartItems">

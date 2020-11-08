@@ -9,6 +9,7 @@ import { CartService } from 'src/app/services';
 })
 export class CartComponent implements OnInit {
   public cartItems: ProductDetails[] = [];
+  public sumCart: number;
   constructor(private readonly cartService: CartService) {}
 
   ngOnInit(): void {
@@ -23,5 +24,11 @@ export class CartComponent implements OnInit {
 
   public removeAll(): void {
     this.cartService.removeAll();
+  }
+
+  get sumPrice(): any {
+    return this.cartItems
+      .map((item) => item.price)
+      .reduce((prev, curr) => prev + curr, 0);
   }
 }
