@@ -6,8 +6,7 @@
       "image": "assets/images/odd.jpg",
       "price": 9.99,
       "discount": 50,
-      "owned": false,
-      "inCart": false
+      "owned": false
     },
     {
       "id": 2,
@@ -15,8 +14,7 @@
       "image": "assets/images/dep.jpg",
       "price": 9.99,
       "discount": 0,
-      "owned": true,
-      "inCart": false
+      "owned": true
     },
     {
       "id": 3,
@@ -24,8 +22,7 @@
       "image": "assets/images/sett.jpg",
       "price": 5.99,
       "discount": 0,
-      "owned": false,
-      "inCart": false
+      "owned": false
     },
     {
       "id": 4,
@@ -33,8 +30,7 @@
       "image": "assets/images/never.jpg",
       "price": 4.99,
       "discount": 50,
-      "owned": false,
-      "inCart": false
+      "owned": false
     },
     {
       "id": 5,
@@ -42,8 +38,7 @@
       "image": "assets/images/creed.jpg",
       "price": 9.99,
       "discount": 0,
-      "owned": false,
-      "inCart": false
+      "owned": false
     }
   ]
 }

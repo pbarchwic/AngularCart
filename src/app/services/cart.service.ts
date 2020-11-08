@@ -11,26 +11,35 @@ export class CartService {
   constructor() {}
 
   public addToCart(product: ProductDetails): void {
-    this.cartItems.push(product);
-    this.cartProducts.next(this.cartItems);
-    product.inCart = true;
+    const checkCart = this.checkCart(product);
+    if (!checkCart) {
+      this.cartItems.push(product);
+      product.inCart = true;
+      this.cartProducts.next(this.cartItems);
+    }
   }
 
   public removeFromCart(product: ProductDetails): void {
     this.cartItems = this.cartItems.filter(
       (item: ProductDetails) => item.id !== product.id
     );
-    product.inCart = false;
+    delete product.inCart;
     this.cartProducts.next(this.cartItems);
   }
 
   public removeAll(): void {
-    this.cartItems.map((item) => (item.inCart = false));
+    this.cartItems.map((item) => {
+      delete item.inCart;
+    });
     this.cartItems = [];
     this.cartProducts.next(this.cartItems);
   }
 
   public getItems(): Observable<ProductDetails[]> {
     return this.cartProducts.asObservable();
+  }
+
+  private checkCart(product: ProductDetails): boolean {
+    return this.cartItems.some((item) => product.id === item.id);
   }
 }

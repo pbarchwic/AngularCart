@@ -4,7 +4,9 @@
       <img src="../../../assets/images/logo.png" />
       <button class="cart">
         <img src="../../../assets/icons/cart.png" />
-        <span class="items-length">{{ cartItems.length }}</span>
+        <span class="items-length" [class.not-empty]="cartItems.length">{{
+          cartItems.length
+        }}</span>
         <div class="cart-content">
           <app-cart></app-cart>
         </div>

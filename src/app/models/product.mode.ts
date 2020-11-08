@@ -5,7 +5,7 @@ export interface ProductDetails {
   price: number;
   discount: number;
   owned: boolean;
-  inCart: boolean;
+  inCart?: boolean;
 }
 
 export interface ProductsResponse {
