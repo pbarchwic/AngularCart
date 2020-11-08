@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductDetails } from 'src/app/models';
 import { CartService } from 'src/app/services';
 
@@ -9,7 +9,7 @@ import { CartService } from 'src/app/services';
 })
 export class CartComponent implements OnInit {
   public cartItems: ProductDetails[] = [];
-  public sumCart: number;
+
   constructor(private readonly cartService: CartService) {}
 
   ngOnInit(): void {
@@ -26,7 +26,7 @@ export class CartComponent implements OnInit {
     this.cartService.removeAll();
   }
 
-  get sumPrice(): any {
+  get sumPrice(): number {
     return this.cartItems
       .map((item) => item.price)
       .reduce((prev, curr) => prev + curr, 0);

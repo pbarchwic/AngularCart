@@ -17,6 +17,7 @@ button {
   background-color: transparent;
   font-family: "Source Sans Pro";
   color: $text-color;
+  border: none;
 
   &:focus, &:hover {
     outline:none !important

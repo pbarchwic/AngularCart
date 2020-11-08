@@ -11,7 +11,7 @@ export class ToolbarComponent implements OnInit {
   public cartItems: ProductDetails[] = [];
   constructor(private readonly cartService: CartService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.cartService.getItems().subscribe((products) => {
       this.cartItems = products;
     });
