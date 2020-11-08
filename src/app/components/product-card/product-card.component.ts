@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ProductDetails } from 'src/app/models';
+import { Component, OnInit } from '@angular/core';
+import { ProductDetails, ProductsResponse } from 'src/app/models';
+import { ProductRepository } from 'src/app/repository';
 import { CartService } from 'src/app/services';
 
 @Component({
@@ -8,13 +9,27 @@ import { CartService } from 'src/app/services';
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product: ProductDetails;
-  constructor(private readonly cartService: CartService) {}
+  public products: ProductDetails[];
+  constructor(
+    private readonly cartService: CartService,
+    private readonly repository: ProductRepository
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    this.getProducts();
+  }
 
   public addToCart(product: ProductDetails): void {
     product.inCart = true;
     this.cartService.addToCart(product);
+  }
+
+  public getProducts(): void {
+    this.repository.getProductDetails().subscribe(
+      (response: ProductsResponse) => {
+        this.products = response.products;
+      },
+      () => {}
+    );
   }
 }
